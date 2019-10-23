@@ -158,3 +158,20 @@ $blurLevel: 3;
   }
 }
 // End Bokheh SCSS
+// Smoke SCSS
+.smoke {
+  background-image: url(./asset/smoke.png);
+  background-size: cover;
+  position: absolute;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  opacity: 0.2;
+  filter: blur(1px);
+  z-index: 100;
+}
+
+// End  Smoke Scss

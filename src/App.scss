@@ -8,6 +8,53 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+// logo SCSS
+
+@font-face {
+  font-family: "Abuget";
+  src: local("Abuget"), url("./asset/Abuget.ttf") format("truetype");
+}
+.logo {
+  position: absolute;
+  top: 30%;
+  left: 36%;
+  text-align: center;
+  color: #eaeaea;
+  /* z-index: 100; */
+}
+
+#name {
+  font-family: Abuget;
+  font-size: 100px;
+}
+#border {
+  border: 1px solid #eaeaea;
+  transform: rotate(60deg);
+  height: 300px;
+  width: 300px;
+}
+.logo:hover #border {
+  animation: blinking 0.6s alternate-reverse infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes blinking {
+  from {
+    border: 1px solid #eaeaea;
+    background-color: none;
+  }
+  to {
+    border: 0px solid;
+  }
+}
+
+#bordercontent {
+  transform: rotate(-60deg);
+  align-items: center;
+  line-height: 2.5;
+}
+// End logo SCSS
+
 // bokeh SCSS
 /* Font */
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
@@ -51,11 +98,14 @@ $blurLevel: 3;
 /* Pretty Lights */
 .bokeh {
   position: relative;
+
+  background: linear-gradient(#0c0612, #340d37);
+
   width: 100vw;
-  height: 94vh;
+  height: 100vh;
   pointer-events: none;
   background-color: none;
-  filter: blur(5px);
+  filter: blur(2px);
   // top: -50px;
   // left: -25px;
   z-index: -100;
@@ -70,8 +120,8 @@ $blurLevel: 3;
 @for $i from 1 through $lights {
   $lightWidth: $lightSize + random(25);
   $lightHeight: $lightWidth;
-  $lightVertical: random(100);
-  $lightHorizontal: random(100);
+  $lightVertical: random(82);
+  $lightHorizontal: random(90);
   $lightBlur: $blurLevel + random($blurLevel);
   $lightDelay: 5 + random(25);
   $animation: 3 + random($totalAnimation);

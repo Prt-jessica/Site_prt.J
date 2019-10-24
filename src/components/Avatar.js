@@ -142,7 +142,6 @@ const Avatar = () => {
         <div class="mouse">
           <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
         </div>
-        <p>move</p>
       </div>
     </div>
   );

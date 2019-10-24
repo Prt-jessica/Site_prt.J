@@ -20,7 +20,7 @@
   left: 36%;
   text-align: center;
   color: #eaeaea;
-  /* z-index: 100; */
+  z-index: 100;
 }
 
 #name {
@@ -171,6 +171,18 @@ $blurLevel: 3;
   bottom: 0;
   opacity: 0.2;
   filter: blur(1px);
-  z-index: 100;
+  z-index: 50;
 }
 // End  Smoke Scss
+//
+#overBokeh {
+  position: absolute;
+  z-index: 100;
+  color: white;
+  transform-style: preserve-3d;
+  top: 0;
+  left: 0;
+  border: 2px solid lightcoral;
+  width: 100%;
+  height: 100%;
+}

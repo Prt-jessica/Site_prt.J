@@ -1,0 +1,442 @@
+// SCSS Avatard
+// @import "compass/css3";
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black");
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{"$animationName"} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+$font: "Archivo Black";
+$flesh: #ffd3c1;
+$eyes: #4d5c1b; //#f3d1bc;
+$hair: #130e08;
+$pull: #4d021a;
+$bg: #353434;
+$blue: #000102;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: $bg;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  div {
+    position: absolute;
+  }
+  .me {
+    left: 0;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    width: 80px;
+    height: 160px;
+
+    $bangs_height: 40;
+    $bangs_top: -8;
+    $bangs_width: 104%;
+    $head_height: 90;
+    $head_width: 70;
+    $head_top: 10;
+
+    .head {
+      transition: all 0.5s ease;
+      width: $head_width + px;
+      height: $head_height + px;
+      background: $flesh;
+      border-radius: 100px;
+      top: $head_top + px;
+      left: 5px;
+      .bangs {
+        transition: all 0.5s ease;
+        height: $bangs_height + px;
+        width: $bangs_width;
+        background: $hair;
+        content: "";
+        position: absolute;
+        border-radius: 100px 240px 100% 400px;
+        top: $bangs_top + px;
+        left: 1px;
+        z-index: 100;
+      }
+      .eyes1 {
+        background: $eyes;
+        border-radius: 0px 0px 20px 20px;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 24px;
+        left: 7px;
+        margin: 10px;
+      }
+
+      .eyes2 {
+        background: $eyes;
+        border-radius: 0px 0px 20px 20px;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 24px;
+        left: 30px;
+        margin: 10px;
+        margin-left: 15px;
+      }
+
+      .mouth {
+        top: 65px;
+        left: 20px;
+        width: 30px;
+        height: 15px;
+        border-radius: 0 0 100px 100px;
+        background: black;
+        overflow: hidden; // allows to hide the tongue in the mouth
+        .tongue {
+          top: 7px;
+          left: 5px;
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+          background: #f5727d;
+        }
+      } //end of head
+    }
+    .look-left {
+      &.head {
+        width: ($head_width) + px;
+        left: -10px;
+        .bangs {
+          width: $bangs_width + 12;
+
+          left: -7px;
+        }
+      }
+    }
+
+    .look-right {
+      &.head {
+        width: ($head_width) + px;
+        left: 15px;
+        .bangs {
+          width: $bangs_width;
+          left: 5px;
+        }
+      }
+    }
+
+    .look-down {
+      &.head {
+        height: $head_height + px;
+        top: $head_top + 10 + px;
+        width: $head_width + px;
+        left: 5px;
+        transform-origin: bott;
+        .bangs {
+          height: 80px;
+          top: $bangs_top + px;
+        }
+      }
+    }
+
+    .look-up {
+      &.head {
+        height: $head_height + px;
+        top: $head_top - 10 + px;
+        width: $head_width + px;
+        left: 5px;
+        transform-origin: bott;
+        .bangs {
+          height: 40px;
+          top: $bangs_top + px;
+          border-radius: 100px 100px 100% 400px;
+        }
+      }
+    }
+
+    .look-down-right {
+      &.head {
+        top: $head_top + 10 + px;
+        left: 25px;
+        width: $head_width + px;
+        transform: rotate(10deg);
+        transform-origin: bo;
+        .bangs {
+          height: $bangs_height + 10 + px;
+          width: $bangs_width + 12;
+        }
+      }
+    }
+
+    .look-up-right {
+      &.head {
+        height: $head_height + px;
+        top: $head_top - 10 + px;
+        width: $head_width + px;
+        left: 15px;
+        transform-origin: bottom center;
+        transform: rotate(-15deg);
+        .bangs {
+          width: $bangs_width + 11;
+          height: 40px;
+          top: $bangs_top + px;
+          left: 5px;
+        }
+      }
+    }
+
+    .look-down-left {
+      &.head {
+        top: $head_top + 10 + px;
+        left: -15px;
+        width: $head_width + px;
+        transform: rotate(-10deg);
+        transform-origin: bot;
+        .bangs {
+          height: $bangs_height + 10 + px;
+          width: $bangs_width + 12;
+          left: -10px;
+        }
+      }
+    }
+
+    .look-up-left {
+      &.head {
+        height: $head_height + px;
+        top: $head_top - 10 + px;
+        width: $head_width + px;
+        left: -10px;
+        transform-origin: bottom center;
+        transform: rotate(15deg);
+        .bangs {
+          width: $bangs_width + 11;
+          height: 40px;
+          top: $bangs_top + px;
+          left: -10px;
+        }
+      }
+    }
+    .neck {
+      height: 60px;
+      width: 20px;
+      position: absolute;
+      border-radius: 0px 0px 100px 100px;
+      background: $flesh;
+      top: 60px;
+      left: 30px;
+      overflow: hidden;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        top: -12px;
+        background: $flesh - 20;
+        left: -18px;
+        transition: all;
+      }
+
+      &.look-left:before {
+        left: -38px;
+      }
+      &.look-right:before {
+        left: -5px;
+      }
+      &.look-down:before {
+        top: -5px;
+      }
+      &.look-up:before {
+        top: -22px;
+      }
+
+      &.look-down-right:before {
+        left: -2px;
+        top: -5px;
+      }
+
+      &.look-up-right:before {
+        left: -10px;
+        top: -20px;
+      }
+
+      &.look-down-left:before {
+        left: -38px;
+        top: -5px;
+      }
+
+      &.look-up-left:before {
+        left: -38px;
+        top: -20px;
+      }
+    }
+
+    .hair {
+      transition: all;
+      position: absolute;
+      height: 200px;
+      width: 105px;
+      border-radius: 44px 44px 14px 14px;
+      background: $hair;
+      left: -12px;
+      top: -12px;
+      overflow: hidden;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 200px;
+        background: $hair;
+        border-radius: 44px 44px 14px 14px;
+        top: 60px;
+        left: 12px;
+      }
+
+      &.look-left {
+        left: -5px;
+        width: 100px;
+        &:after {
+        }
+      }
+
+      &.look-right {
+        left: -17px;
+        width: 100px;
+      }
+      &.look-down {
+        top: -12px;
+        height: 190px;
+      }
+      &.look-up {
+        top: -8px;
+        height: 210px;
+      }
+      &.look-down-right {
+        transform: translate(-4px);
+      }
+
+      &.look-up-right {
+        left: -25px;
+        top: -8px;
+        height: 210px;
+      }
+      &.look-down-left {
+        transform: rotat;
+      }
+
+      &.look-up-left {
+        left: -8px;
+        top: -8px;
+        height: 220px;
+      }
+    } //end of hair
+
+    .clothes {
+      background: $pull;
+      width: 80px;
+      height: 50px;
+      border-radius: 100px 100px 20px 20px;
+      top: 105px;
+      overflow: hidden;
+
+      //   .jumper {
+      //     width: 60px;
+      //     height: 100%;
+      //     top: 60%;
+      //     background: $blue;
+      //     left: 0;
+      //     right: 0;
+      //     margin: auto;
+      //     &:before {
+      //       background: $blue;
+      //       width: 10px;
+      //       height: 50px;
+      //       content: "";
+      //       position: absolute;
+      //       top: -40px;
+      //       left: 0px;
+      //     }
+      //     &:after {
+      //       background: $blue;
+      //       width: 10px;
+      //       height: 50px;
+      //       content: "";
+      //       position: absolute;
+      //       top: -40px;
+      //       left: 50px;
+      //     }
+      //   }
+    }
+  }
+  p {
+    color: $bg + 30;
+    margin-top: 180px;
+    font-family: $font;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .mouse {
+    color: #fff;
+    font-size: 30px;
+    left: 0;
+    right: 0;
+    top: 210px;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    animation: mouseAction 5s linear;
+    transform: rotate(0deg);
+    opacity: 0;
+
+    i.fa {
+      transition: all 0.5s ease;
+      animation: mouseAction2 5s linear;
+      transform: rotate(0deg);
+      text-shadow: -4px 6px 0px rgba(0, 0, 0, 0.34);
+    }
+  }
+}
+//end of container
+
+@keyframes mouseAction {
+  0% {
+    opacity: 1;
+  }
+  99.9% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(1080deg);
+    opacity: 0;
+  }
+}
+@keyframes mouseAction2 {
+  100% {
+    transform: rotate(-1080deg);
+  }
+}
+// End SCSS Avatard

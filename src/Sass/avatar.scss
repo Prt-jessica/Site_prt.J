@@ -36,6 +36,9 @@ body {
   margin: 0;
 }
 .container {
+  @media (min-width: 320px) and (max-width: 760px) {
+    display: none;
+  }
   position: relative;
   left: 4%;
   right: 0;

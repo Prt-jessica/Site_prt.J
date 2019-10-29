@@ -122,7 +122,7 @@ const Avatar = () => {
   });
 
   return (
-    <div className="avatar">
+    <div className="avatar3d">
       <div class="container">
         <div class="me">
           <div class="hair"></div>

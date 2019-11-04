@@ -1,6 +1,6 @@
 import React from "react";
 import Avatar from "./Avatar";
-import Experience from "./Experience";
+
 const CardVisit = () => {
   return (
     <div id="site">
@@ -16,9 +16,6 @@ const CardVisit = () => {
         <div id="avatar">
           <Avatar />
         </div>
-      </div>
-      <div className="experience">
-        <Experience />
       </div>
     </div>
   );

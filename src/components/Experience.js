@@ -5,15 +5,22 @@ const Experience = () => {
     <div id="infoExperience">
       <div id="Formations">
         <h3>Formations</h3>
-        <p> 05/2019-12/2019 BeCode - Web développement </p>
+        <p>
+          {" "}
+          05/2019-12/2019{" "}
+          <span className="important">BeCode - Web développement</span>{" "}
+        </p>
         <p>
           2017-2018 Make Up For Ever Academy - Diplômée de la “Make-up artist
           formation”
         </p>
         <p>
           2010-2013 Institut Technique Provincial COURT-SAINT-ETIENNE -
-           Auxiliaire administratif et d'accueil <br /> - CESS et certificat
-          relatif aux connaissances de gestion.
+           Auxiliaire administratif et d'accueil <br />
+          <span className="important">
+            {" "}
+            - CESS et certificat relatif aux connaissances de gestion.
+          </span>
           <br /> - Diplôme de fin de sixième professionnelle et qualification en
           auxiliaire administratif et d’accueil.
         </p>

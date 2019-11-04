@@ -15,6 +15,14 @@ const ContentSite = () => {
         <div className="experience">
           <Experience />
         </div>
+        <div id="CvDownload">
+          <a
+            href="https://github.com/Prt-jessica/Site_prt.J/raw/master/CV.pdf"
+            download="CV_PIROTTE_Jessica"
+          >
+            <button id="btnDownload">CV download PDF</button>
+          </a>
+        </div>
         <Portfolio />
       </div>
       <Bokeh />

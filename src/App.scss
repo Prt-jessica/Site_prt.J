@@ -413,3 +413,21 @@ $blurLevel: 3;
     opacity: 1;
   }
 }
+#CvDownload {
+  width: 100%;
+  height: 10%;
+  background-color: $lightgrey;
+  text-align: center;
+  border: 2px solid $cadregrey;
+  margin: 0 0 10px 0;
+}
+#btnDownload {
+  position: relative;
+  top: 18px;
+  font-family: simplicity;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: rgb(250, 192, 209);
+  align-content: center;
+}

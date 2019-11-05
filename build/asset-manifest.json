@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d162ab9.chunk.css",
+    "main.css": "/static/css/main.a0de7e26.chunk.css",
     "main.js": "/static/js/main.5a361ea5.chunk.js",
     "main.js.map": "/static/js/main.5a361ea5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6edd80a4.js",
@@ -8,16 +8,16 @@
     "static/js/2.8e0ed0c1.chunk.js": "/static/js/2.8e0ed0c1.chunk.js",
     "static/js/2.8e0ed0c1.chunk.js.map": "/static/js/2.8e0ed0c1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.487f5dfc53076c2cdad3f255f75ec6c3.js": "/precache-manifest.487f5dfc53076c2cdad3f255f75ec6c3.js",
+    "precache-manifest.18d8663457e7e0278e1db9a0bf690fa0.js": "/precache-manifest.18d8663457e7e0278e1db9a0bf690fa0.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.4d162ab9.chunk.css.map": "/static/css/main.4d162ab9.chunk.css.map",
+    "static/css/main.a0de7e26.chunk.css.map": "/static/css/main.a0de7e26.chunk.css.map",
     "static/media/App.scss": "/static/media/smoke.7b9628ba.png",
     "static/media/BookShelf.png": "/static/media/BookShelf.29e7458e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6edd80a4.js",
     "static/js/2.8e0ed0c1.chunk.js",
-    "static/css/main.4d162ab9.chunk.css",
+    "static/css/main.a0de7e26.chunk.css",
     "static/js/main.5a361ea5.chunk.js"
   ]
 }

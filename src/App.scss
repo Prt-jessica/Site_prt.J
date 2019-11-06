@@ -37,6 +37,7 @@ $whitegrey: #eaeaea;
   color: $whitegrey;
   z-index: 100;
   transform: translate(-50%, -50%);
+  cursor: pointer;
   @media (min-width: 320px) and (max-width: 760px) {
     margin: 0 auto;
     transform: translate(-50%, -50%);
